@@ -10,7 +10,7 @@
 (setq default-major-mode 'text-mode)
 ;; 设置字体
 ;; 方法为: emacs->options->Set Default Font->"M-x describe-font"查看当前使用的字体名称、字体大小
-(set-default-font " -bitstream-Courier 10 Pitch-normal-normal-normal-*-19-*-*-*-m-0-iso10646-1")
+;;(set-default-font " -bitstream-Courier 10 Pitch-normal-normal-normal-*-19-*-*-*-m-0-iso10646-1")
 ;; 设置缩进
 (setq indent-tabs-mode nil)
 (setq default-tab-width 4)
