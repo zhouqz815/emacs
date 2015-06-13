@@ -1,6 +1,6 @@
 ;;设置一些环境
-(setenv "HOME" "d:/Program Files/emacs-22.3/ant/")
-(setenv "PATH" "d:/Program Files/emacs-22.3/ant/")
+(setenv "HOME" "d:/emacs/ant/")
+(setenv "PATH" "d:/emacs/ant/")
 ;;set the default file path
 (setq default-directory "~/")
 ;;这里是设置默认的el文件的地方，也可以改成其它地方
