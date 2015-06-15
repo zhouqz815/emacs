@@ -8,9 +8,12 @@
 ;; 支持emacs和外部程序的粘贴
 (setq x-select-enable-clipboard t)
 (setq default-major-mode 'text-mode)
+;;设置背景色和字体色
+(set-foreground-color "grey")
+(set-background-color "black")
 ;; 设置字体
 ;; 方法为: emacs->options->Set Default Font->"M-x describe-font"查看当前使用的字体名称、字体大小
-;;(set-default-font " -bitstream-Courier 10 Pitch-normal-normal-normal-*-19-*-*-*-m-0-iso10646-1")
+(set-default-font "-outline-微软雅黑-normal-normal-normal-sans-13-*-*-*-p-*-iso8859-1")
 ;; 设置缩进
 (setq indent-tabs-mode nil)
 (setq default-tab-width 4)
@@ -26,3 +29,25 @@
     nil 0 nil "_NET_WM_STATE" 32
     '(2 "_NET_WM_STATE_FULLSCREEN" 0))
   )
+;; 默认显示 80列就换行
+(setq default-fill-column 80)
+;; 去掉工具栏
+(tool-bar-mode nil)
+
+;;去掉菜单栏
+;;(menu-bar-mode nil)
+
+;; 去掉滚动栏
+(scroll-bar-mode nil)
+;; 启动窗口大小
+(setq default-frame-alist
+    '((height . 35) (width . 125) (menu-bar-lines . 20) (tool-bar-lines . 0)))
+
+;; 在标题栏提示你目前在什么位置
+(setq frame-title-format "zhj@%b")
+ ;; 高亮显示要拷贝的区域
+ (setq-default cursor-type 'bar)
+;;不产生备份文件
+(setq make-backup-files nil)
+;;关闭启动画面
+(setq inhibit-startup-message t)
