@@ -9,4 +9,4 @@
 
 (load "init-base")
 (load "init-key")
-(load "init-chajian")
+(load "init-addon")
