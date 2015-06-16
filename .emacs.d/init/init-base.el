@@ -51,3 +51,6 @@
 (setq make-backup-files nil)
 ;;关闭启动画面
 (setq inhibit-startup-message t)
+
+(ansi-color-for-comint-mode-on)
+;真正shell－mode乱码解决。
