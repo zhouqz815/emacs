@@ -10,3 +10,5 @@
 (load "init-base")
 (load "init-key")
 (load "init-addon")
+
+(add-hook 'after-init-hook 'split-window-horizontally)

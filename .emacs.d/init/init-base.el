@@ -51,6 +51,42 @@
 (setq make-backup-files nil)
 ;;关闭启动画面
 (setq inhibit-startup-message t)
-
-(ansi-color-for-comint-mode-on)
 ;真正shell－mode乱码解决。
+(ansi-color-for-comint-mode-on)
+;;光标靠近鼠标指针时，让鼠标指针自动让开，别挡住视线。
+(setq mouse-avoidance-mode 'animate)
+
+;; 填入大中小括号，双单引号的匹配
+;; 详细格式可以参照C-h f skeleton-pair-alist
+(setq skeleton-pair-alist
+      '((?\" _ "\"" >)
+        (?\' _ "\'" >)
+        (?\( _ ")" >)
+        (?\[ _ "]" >)
+        (?\{ _ "}" >)))
+
+(setq skeleton-pair t)
+
+(mapcar
+ (function (lambda (setting)
+         (setq auto-mode-alist
+           (cons setting auto-mode-alist))))
+ '(("\\.xml$" .  sgml-mode)
+   ("\\.org\\'" . org-mode)
+   ("\\\.bash" . sh-mode)
+   ("\\.rdf$" .  sgml-mode)
+   ("\\.session" . emacs-lisp-mode)
+   ("\\.l$" . c-mode)
+   ("\\.css$" . css-mode)
+   ("\\.cfm$" . html-mode)
+   ("gnus" . emacs-lisp-mode)
+   ("\\.py$" . python-mode)
+   ("\\.rkt$" . scheme-mode)
+   ("\\.idl$" . idl-mode)))
+
+(setq explicit-shell-file-name
+      "C:/Program Files (x86)/Git/bin/bash.exe")
+(setq shell-file-name "bash")
+(setq explicit-bash.exe-args '("--noediting" "--login" "-i"))
+(setenv "SHELL" shell-file-name)
+(add-hook 'comint-output-filter-functions 'comint-strip-ctrl-m)

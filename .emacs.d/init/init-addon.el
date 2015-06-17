@@ -55,4 +55,21 @@
                             ))
 (setq org-src-fontify-natively t)
 (setq org-todo-keywords
-      '((sequence "TODO" "DOING" "HANGUP" "|" "DONE" "CANCEL")))
+  '((sequence "TODO" "DOING" "HANGUP" "|" "DONE" "CANCEL")))
+;;------------------------skeleton-------------------------
+(define-skeleton latex-skeleton
+  "Inserts a Latex letter skeleton into current buffer.
+  This only makes sense for empty buffers."
+  "Empfänger: "
+  "\\documentclass[a4paper]{letter}\n"
+  "\\usepackage{german}\n"
+  "\\usepackage[latin1]{inputenc}\n"
+  "\\name{A. Schröder}\n"
+  "\\address{Alexander Schröder \\\\ Langstrasse 104 \\\\ 8004 Zürich}\n"
+  "\\begin{document}\n"
+  "\\begin{letter}{" str | " *** Empfänger *** " "}\n"
+  "\\opening{" _ "}\n\n"
+  "\\closing{Mit freundlichen Grüssen,}\n"
+  "\\end{letter}\n"
+  "\\end{document}\n")
+(global-set-key "\C-cl" 'latex-skeleton)
