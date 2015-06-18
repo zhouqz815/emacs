@@ -10,7 +10,28 @@
 (load "init-elpa")
 (load "init-base")
 (load "init-key")
+;;如果是初次加载，会下载elpa包，会比较慢，需要一个个地加载
+(load "init-themes")
 (load "init-addon")
+(load "init-smex")
+(load "init-yasnippet")
+(load "init-auto-complete")
+(load "init-evil")
 ;;(load "init-org")
 ;;把窗口分为两份
-(add-hook 'after-init-hook 'split-window-horizontally)
+;;(add-hook 'after-init-hook 'split-window-horizontally)
+
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-enabled-themes (quote (sanityinc-solarized-dark)))
+ '(custom-safe-themes (quote ("4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
