@@ -7,8 +7,10 @@
 (add-to-list 'load-path "~/.emacs.d/")
 (add-to-list 'load-path "~/.emacs.d/init")
 (add-to-list 'load-path "~/.emacs.d/addon")
+(load "init-elpa")
 (load "init-base")
 (load "init-key")
 (load "init-addon")
-
+;;(load "init-org")
+;;把窗口分为两份
 (add-hook 'after-init-hook 'split-window-horizontally)

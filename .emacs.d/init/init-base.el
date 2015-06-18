@@ -11,6 +11,8 @@
 ;;设置背景色和字体色
 (set-foreground-color "grey")
 (set-background-color "black")
+;; all backups goto ~/.backups instead in the current directory
+(setq backup-directory-alist (quote (("." . "~/.backups"))))
 ;; 设置字体
 ;; 方法为: emacs->options->Set Default Font->"M-x describe-font"查看当前使用的字体名称、字体大小
 (set-default-font "-outline-微软雅黑-normal-normal-normal-sans-13-*-*-*-p-*-iso8859-1")
@@ -44,7 +46,7 @@
     '((height . 35) (width . 125) (menu-bar-lines . 20) (tool-bar-lines . 0)))
 
 ;; 在标题栏提示你目前在什么位置
-(setq frame-title-format "zhj@%b")
+(setq frame-title-format "ant@zhouqz")
  ;; 高亮显示要拷贝的区域
  (setq-default cursor-type 'bar)
 ;;不产生备份文件
@@ -90,3 +92,5 @@
 (setq explicit-bash.exe-args '("--noediting" "--login" "-i"))
 (setenv "SHELL" shell-file-name)
 (add-hook 'comint-output-filter-functions 'comint-strip-ctrl-m)
+
+ (setq gnus-select-method '(nntp "news.cn99.com"))
