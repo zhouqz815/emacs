@@ -16,3 +16,8 @@
 (global-set-key (kbd "M-<up>") 'beginning-of-buffer)
 (global-set-key (kbd "s-/") 'comment-region)
 (global-set-key (kbd "s-?") 'uncomment-region)
+
+;;; winner-mode
+(winner-mode 1)
+(global-set-key (kbd "C-x 4 u") 'winner-undo)
+(global-set-key (kbd "C-x 4 r") 'winner-redo)

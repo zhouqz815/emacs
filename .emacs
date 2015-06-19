@@ -15,6 +15,8 @@
 ;;如果是初次加载，会下载elpa包，会比较慢，需要一个个地加载
 (load "init-themes")
 (load "init-addon")
+(load "init-tabbar")
+(load "init-markdown")
 (load "init-smex")
 (load "init-yasnippet")
 (load "init-auto-complete")
