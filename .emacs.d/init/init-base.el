@@ -77,7 +77,7 @@
     ("\\.idl$" . idl-mode)))
 
 (setq explicit-shell-file-name
-      "C:/Program Files (x86)/Git/bin/bash.exe")
+      "C:/Program Files/Git/bin/bash.exe")
 (setq shell-file-name "bash")
 (setq explicit-bash.exe-args '("--noediting" "--login" "-i"))
 (setenv "SHELL" shell-file-name)

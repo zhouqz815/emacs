@@ -1,6 +1,6 @@
 ;;设置一些环境
 (setenv "HOME" "d:/emacs/ant/")
-(setenv "PATH" "d:/emacs/ant/;C:/cygwin64/bin;C:\Program Files (x86)\Git\bin")
+(setenv "PATH" "d:/emacs/ant/;C:/cygwin64/bin;C:\Program Files\Git\bin")
 (setenv "ALTERNATE_EDITOR" "runemacs.exe")
 (setenv "EMACS_SERVER_FILE" "~/.emacs.d/server")
 ;;set the default file path
@@ -22,7 +22,7 @@
 (load "init-auto-complete")
 (load "init-evil")
 (load "init-hydra")
-;;(load "init-org")
+(load "init-org")
 ;;把窗口分为两份
 ;;(add-hook 'after-init-hook 'split-window-horizontally)
 

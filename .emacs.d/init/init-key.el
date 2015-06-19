@@ -21,3 +21,12 @@
 (winner-mode 1)
 (global-set-key (kbd "C-x 4 u") 'winner-undo)
 (global-set-key (kbd "C-x 4 r") 'winner-redo)
+
+(defun display-buffer-name ()
+  (interactive)
+  (message (buffer-file-name (current-buffer))))
+(global-set-key (kbd "M-4") 'yic-kill-current-buffer)
+(global-set-key (kbd "M-1") 'delete-other-windows)
+(global-set-key (kbd "M-0") 'other-window)
+(global-set-key (kbd "M-5") 'display-buffer-name)
+(global-set-key (kbd "C-x f") 'find-file-at-point)
