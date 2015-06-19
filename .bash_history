@@ -5,3 +5,6 @@ ls
 ls
 dsfsdfdsdfsdf
 ls
+ls
+git
+vi

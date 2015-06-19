@@ -23,32 +23,22 @@
 (setq tab-stop-list ())
 ;;(loop for x downfrom 40 to 1 do
 ;;  (setq tab-stop-list (cons (* x 4) tab-stop-list)))
-;; 实现全屏效果，快捷键为f11
-(global-set-key [f11] 'my-fullscreen)
-(defun my-fullscreen ()
-  (interactive)
-  (x-send-client-message
-    nil 0 nil "_NET_WM_STATE" 32
-    '(2 "_NET_WM_STATE_FULLSCREEN" 0))
-  )
 ;; 默认显示 80列就换行
 (setq default-fill-column 80)
 ;; 去掉工具栏
-(tool-bar-mode nil)
-
 ;;去掉菜单栏
-;;(menu-bar-mode nil)
-
 ;; 去掉滚动栏
-(scroll-bar-mode nil)
+(if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
+(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
+(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 ;; 启动窗口大小
 (setq default-frame-alist
-    '((height . 35) (width . 125) (menu-bar-lines . 20) (tool-bar-lines . 0)))
+      '((height . 35) (width . 125) (menu-bar-lines . 20) (tool-bar-lines . 0)))
 
 ;; 在标题栏提示你目前在什么位置
 (setq frame-title-format "ant@zhouqz")
- ;; 高亮显示要拷贝的区域
- (setq-default cursor-type 'bar)
+;; 高亮显示要拷贝的区域
+(setq-default cursor-type 'bar)
 ;;不产生备份文件
 (setq make-backup-files nil)
 ;;关闭启动画面
@@ -70,21 +60,21 @@
 (setq skeleton-pair t)
 
 (mapcar
- (function (lambda (setting)
-         (setq auto-mode-alist
-           (cons setting auto-mode-alist))))
- '(("\\.xml$" .  sgml-mode)
-   ("\\.org\\'" . org-mode)
-   ("\\\.bash" . sh-mode)
-   ("\\.rdf$" .  sgml-mode)
-   ("\\.session" . emacs-lisp-mode)
-   ("\\.l$" . c-mode)
-   ("\\.css$" . css-mode)
-   ("\\.cfm$" . html-mode)
-   ("gnus" . emacs-lisp-mode)
-   ("\\.py$" . python-mode)
-   ("\\.rkt$" . scheme-mode)
-   ("\\.idl$" . idl-mode)))
+  (function (lambda (setting)
+              (setq auto-mode-alist
+                    (cons setting auto-mode-alist))))
+  '(("\\.xml$" .  sgml-mode)
+    ("\\.org\\'" . org-mode)
+    ("\\\.bash" . sh-mode)
+    ("\\.rdf$" .  sgml-mode)
+    ("\\.session" . emacs-lisp-mode)
+    ("\\.l$" . c-mode)
+    ("\\.css$" . css-mode)
+    ("\\.cfm$" . html-mode)
+    ("gnus" . emacs-lisp-mode)
+    ("\\.py$" . python-mode)
+    ("\\.rkt$" . scheme-mode)
+    ("\\.idl$" . idl-mode)))
 
 (setq explicit-shell-file-name
       "C:/Program Files (x86)/Git/bin/bash.exe")
@@ -93,4 +83,5 @@
 (setenv "SHELL" shell-file-name)
 (add-hook 'comint-output-filter-functions 'comint-strip-ctrl-m)
 
- (setq gnus-select-method '(nntp "news.cn99.com"))
+(setq gnus-select-method '(nntp "news.cn99.com"))
+(org-agenda-list t )

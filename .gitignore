@@ -44,3 +44,8 @@ site-lisp/package/
 .newsrc-dribble
 smex-items
 ac-comphist.dat
+_viminfo
+.recentf
+.bash_history
+/server
+.ido.last

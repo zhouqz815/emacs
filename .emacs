@@ -1,6 +1,8 @@
 ;;设置一些环境
 (setenv "HOME" "d:/emacs/ant/")
-(setenv "PATH" "d:/emacs/ant/")
+(setenv "PATH" "d:/emacs/ant/;C:/cygwin64/bin;C:\Program Files (x86)\Git\bin")
+(setenv "ALTERNATE_EDITOR" "runemacs.exe")
+(setenv "EMACS_SERVER_FILE" "~/.emacs.d/server")
 ;;set the default file path
 (setq default-directory "~/")
 ;;这里是设置默认的el文件的地方，也可以改成其它地方
@@ -17,11 +19,12 @@
 (load "init-yasnippet")
 (load "init-auto-complete")
 (load "init-evil")
+(load "init-hydra")
 ;;(load "init-org")
 ;;把窗口分为两份
 ;;(add-hook 'after-init-hook 'split-window-horizontally)
 
-
+;;(server-start)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
