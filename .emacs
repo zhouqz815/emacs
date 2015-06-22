@@ -1,6 +1,6 @@
 ;;设置一些环境
 (setenv "HOME" "d:/emacs/ant/")
-(setenv "PATH" "d:/emacs/ant/;C:/cygwin64/bin;C:\Program Files\Git\bin")
+(setenv "PATH" "d:/emacs/ant/;C:/cygwin/bin;C:\Program Files\Git\bin")
 (setenv "ALTERNATE_EDITOR" "runemacs.exe")
 (setenv "EMACS_SERVER_FILE" "~/.emacs.d/server")
 ;;set the default file path
@@ -23,6 +23,7 @@
 (load "init-evil")
 (load "init-hydra")
 (load "init-org")
+(load "init-acejump")
 ;;把窗口分为两份
 ;;(add-hook 'after-init-hook 'split-window-horizontally)
 
@@ -40,3 +41,4 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+(put 'dired-find-alternate-file 'disabled nil)
