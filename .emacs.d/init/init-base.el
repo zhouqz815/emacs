@@ -12,7 +12,14 @@
 (set-foreground-color "grey")
 (set-background-color "black")
 ;; all backups goto ~/.backups instead in the current directory
-(setq backup-directory-alist (quote (("." . "~/.backups"))))
+;(setq backup-directory-alist (quote (("." . "~/.backups"))))
+(setq backup-directory-alist `(("." . "~/.saves")))
+(setq backup-by-copying t)
+(setq delete-old-versions t
+  kept-new-versions 6
+  kept-old-versions 2
+  version-control t)
+(setq make-backup-files nil)
 ;; 设置字体
 ;; 方法为: emacs->options->Set Default Font->"M-x describe-font"查看当前使用的字体名称、字体大小
 (set-default-font "-outline-微软雅黑-normal-normal-normal-sans-13-*-*-*-p-*-iso8859-1")

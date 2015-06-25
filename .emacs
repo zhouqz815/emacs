@@ -1,6 +1,6 @@
 ;;设置一些环境
 (setenv "HOME" "d:/emacs/ant/")
-(setenv "PATH" "d:/emacs/ant/;C:/cygwin/bin;C:\Program Files\Git\bin")
+(setenv "PATH" "d:/emacs/ant/;C:/cygwin64/bin;C:\Program Files(\Git\bin")
 (setenv "ALTERNATE_EDITOR" "runemacs.exe")
 (setenv "EMACS_SERVER_FILE" "~/.emacs.d/server")
 ;;set the default file path
@@ -12,6 +12,8 @@
 (load "init-elpa")
 (load "init-base")
 (load "init-key")
+;;在window下面会绑定win键
+(load "init-winkey")
 ;;如果是初次加载，会下载elpa包，会比较慢，需要一个个地加载
 (load "init-themes")
 (load "init-addon")

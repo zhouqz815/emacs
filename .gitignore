@@ -17,6 +17,7 @@ cookies
 /ac-comphist.dat
 \#*
 /elpa
+/elpa/archives
 /elpa/*
 site-lisp/package/
 /swank
@@ -38,7 +39,7 @@ site-lisp/package/
 /org-clock-save.el
 /ditaa*.jar
 /ido.last
-/recentf
+/.recentf
 /viper
 /auto-save-list
 .newsrc-dribble
@@ -50,3 +51,4 @@ _viminfo
 /server
 .ido.last
 /.recentf
+/.saves
